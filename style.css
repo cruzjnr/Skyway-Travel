@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     font-weight: 400;
     margin: 0;
-    background: rgba(128, 128, 128, 0.258)
+    background: #faf7f2
 }
 
 .navbar {
@@ -74,7 +74,7 @@ body {
 .logo-af {
     width: 35px;
     height: 35px;
-    background: #003a4de6;
+    background: #0f6e56;
     color: white;
     border-radius: 50%;
     display: grid;
@@ -84,12 +84,12 @@ body {
 .avatar {
     width: 30px;
     height: 30px;
-    background: #003a4d18;
-    color: #003a4de6;
+    background: #1b4a4f21;
+    color: #1b4a4f;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    border: 1px solid #003a4de6;
+    border: 1px solid #1b4a4f94;
 }
 
 .airline-info {
@@ -159,7 +159,7 @@ body {
 }
 
 .footer {
-    background: #003a4de6;
+    background: #1b4a4f;
     color: white;
     padding-top: 40px 60px;
     font-family: Arial, sans-serif;
@@ -255,10 +255,10 @@ body {
 }
 
 .btn-outline {
-    border: 1.5px solid #003a4de6;
+    border: 1px solid #003a4db9;
     padding: 8px 16px;
     border-radius: 8px;
-    background: #003a4d1d;
+    background: #003a4d24;
     color: #003a4de6;
     cursor: pointer;
     font-weight: 550;
