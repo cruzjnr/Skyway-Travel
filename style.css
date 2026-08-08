@@ -306,7 +306,7 @@ body {
 
 
 /* MOBILE SCREEN */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   /* Navbar */
   .navbar {
     padding: 12px 20px; 
