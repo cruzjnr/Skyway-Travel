@@ -306,7 +306,12 @@ body {
 
 
 /* MOBILE SCREEN */
-@media (max-width: 600px) {
+@media (max-width: 1200px ) {
+
+    .page-wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
   /* Navbar */
   .navbar {
     padding: 12px 20px; 
