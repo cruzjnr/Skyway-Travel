@@ -306,7 +306,7 @@ body {
 
 
 /* MOBILE SCREEN */
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   /* Navbar */
   .navbar {
     padding: 12px 20px; 
@@ -369,6 +369,7 @@ body {
     display: flex;
     gap: 12px;
     align-items: center;
+    margin-top: 40px;
 }
 
   .actions {
