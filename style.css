@@ -368,7 +368,7 @@ body {
 @media (max-width: 768px) {
   body {
     margin: 0;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
   }
   header.navbar {
     display: flex !important;
