@@ -1,0 +1,421 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #FDF8F3; color: #1a1a1a; }
+.container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+
+/* HEADER */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; }
+.nav-left .image { width: 160px; }
+.nav-center { display: flex; gap: 25px; }
+.nav-center a { text-decoration: none; color: #000; font-weight: 500; }
+.nav-right { display: flex; align-items: center; gap: 15px; }
+.support { display: flex; align-items: center; gap: 8px; }
+.support i { background: #f1f1f1; padding: 8px; border-radius: 50%; }
+.support .phone { font-weight: 600; }
+.support span { font-size: 12px; color: #666; }
+.btn-orange { background: #ff7043; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.hamburger { display: none; font-size: 24px; background: none; border: none; }
+
+/* BREADCRUMB */
+.breadcrumb a {
+  color: #777; 
+  text-decoration: none; 
+  margin: 0 6px;
+  font-size: 14px;
+}
+
+.breadcrumb a:hover {
+  color: blue; 
+}
+
+.breadcrumb {
+  color: #777; 
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.breadcrumb span { color: #1b4a4f; font-weight: 600; }
+
+/* FLIGHT PAGE LAYOUT */
+.flight-page { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; }
+.card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #eee; }
+.card h4 { margin-bottom: 15px; font-size: 16px; }
+
+/* FLIGHT CARD */
+.card-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; }
+.airline { display: flex; gap: 12px; align-items: center; }
+.airline-logo { background: #0B7A5F; color: #fff; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; }
+.airline h3 { font-size: 16px; }
+.airline p { font-size: 12px; color: #777; }
+.tag { border: 1px solid #1b4a4f; background-color: #1b4a4f10; padding: 5px 12px; border-radius: 6px; font-size: 12px; }
+.flight-route { display: flex; justify-content: space-between; text-align: center; align-items: center; }
+.flight-route h2 { font-size: 28px; }
+.flight-route p { font-weight: 600; }
+.flight-route span { font-size: 12px; color: #777; }
+.flight-duration { 
+  width: 180px;
+  text-align: center;
+}
+
+.flight-duration > span {
+  display: block;
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 8px; 
+}
+
+.flight-duration .line { 
+  position: relative;
+  height: 1px;
+  background: #ddd;
+  margin: 0 10px; 
+}
+
+/* dots */
+.flight-duration .line::before,
+.flight-duration .line::after {
+  content: '';
+  position: absolute;
+  top: -2.5px;
+  width: 5px;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.76);
+  border-radius: 50%;
+}
+.flight-duration .line::before { left: -10px; }
+.flight-duration .line::after { right: -10px; }
+
+/* Nonstop pill */
+.flight-duration .line span { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff; 
+  padding: 2px 12px; 
+  color: #0B7A5F; 
+  font-weight: 600;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* OTHER CARDS */
+.details-grid { display: flex; justify-content: space-between; }
+.details-grid label { font-size: 12px; color: #777; }
+.details-grid p { font-weight: 800px;}
+.baggage { display: flex; justify-content: space-between; }
+.baggage div { display: flex; gap: 10px; align-items: center; }
+.baggage i { font-size: 20px; background: #1b4a4f26; padding: 10px; border-radius: 50%; color: #003a4db9; }
+.baggage span { font-size: 12px; color: #777; display: block; }
+.amenities { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.amenities i { color: #1b4a4f; margin-right: 5px; border-radius: 50%; }
+.policy { border-top: 1px solid #eee; padding-top: 10px; margin-top: 10px; font-size: 13px; }
+.policy p { color: #666; margin-top: 4px; }
+
+/* PRICE SIDEBAR - DESKTOP */
+.flight-right .card.price-card {
+  font-size: 13px;
+  color: #333;
+}
+
+.flight-right .price-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.flight-right .price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.flight-right .price-card hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 10px 0;
+}
+
+.flight-right .price-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px; 
+  font-weight: 400; 
+  color: #111;
+  margin-top: 4px;
+}
+
+.flight-right .price-card small {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin: 6px 0 16px 0; 
+}
+
+.flight-right .btn-book {
+  width: 100%;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  background: #ff7043;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.flight-right .secure {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+.flight-right .secure i {
+  color: #0B7A5F; 
+  margin-right: 4px;
+}
+
+/* FOOTER */
+.footer { background: #1b4a4f; color: #fff; padding-top: 40px; }
+.footer-container {    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px; 
+    gap: 20px;
+    margin-top: -20px;
+  }
+
+.footer-brand img { width: 160px; margin-bottom: 15px; }
+.footer-brand p { color: #ccc; line-height: 1.6; margin-bottom: 15px; }
+
+.footer .social-icons a {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.3s;
+ }
+
+ .footer .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+ }
+    
+.footer .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.footer .social-icons a img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-top: 15px;
+  border-radius: 50%;
+}
+
+.footer-col h4 { margin-bottom: 15px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: #ccc; text-decoration: none; font-size: 14px; }
+.footer-bottom { background: #ff7043; display: flex; justify-content: space-between; padding: 12px 40px; border-radius: 10px 10px 0 0; max-width: 1200px; margin: auto; }
+.footer-bottom a { color: #fff; text-decoration: none; margin-left: 20px; }
+
+/* ========= DESKTOP TEXT REDUCTION ========= */
+
+/* Flight times */
+.flight-route h2 { 
+  font-size: 16px; 
+}
+
+/* Airport name + Terminal */
+.flight-route p { 
+  font-size: 10px; 
+  font-weight: 600;
+}
+.flight-route span { 
+  font-size: 10px; 
+  color: #777; 
+}
+
+/* Middle duration */
+.flight-duration { 
+  font-size: 10px; 
+}
+.flight-duration .line span { 
+  font-size: 10px; 
+}
+
+/* Airline header */
+.airline h3 { 
+  font-size: 13px; 
+}
+.airline p { 
+  font-size: 10px; 
+}
+
+/* Card titles */
+.card h4 { 
+  font-size: 13px; 
+}
+
+.remove small {
+  font-size: 10px;
+}
+
+
+/* ========= MOBILE: 768px and below ========= */
+@media (max-width: 768px) {
+  
+  body { background: #FDF8F3; }
+  .container { padding: 0 16px; margin: 20px auto; }
+
+  /* HEADER */
+  .navbar { 
+    padding: 12px 16px; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-left .image { width: 120px; }
+  .nav-center, .nav-right { display: none !important; }
+  .hamburger { 
+    display: block !important; 
+    font-size: 26px;
+    color: #0B3D3E;
+  }
+
+  /* BREADCRUMB */
+  .breadcrumb { font-size: 12px; margin-bottom: 15px; }
+
+  /* STACK EVERYTHING */
+  .flight-page { 
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+  .card { padding: 16px; border-radius: 10px; }
+
+  /* FLIGHT CARD */
+  .card-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .airline h3 { font-size: 15px; }
+  .tag { align-self: flex-end; margin-top: -35px; }
+  
+  /* FLIGHT CARD MOBILE FIX */
+.flight-route { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  position: relative;
+  padding: 10px 0;
+}
+.flight-route > div:first-child,
+.flight-route > div:last-child {
+  flex: 1;
+}
+.flight-route h2 { 
+  font-size: 22px; 
+  margin-bottom: 2px;
+}
+.flight-route p { 
+  font-size: 13px;
+  font-weight: 600;
+}
+.flight-route span { 
+  font-size: 10px; 
+  color: #777; 
+  display: block;
+  line-height: 1.3;
+}
+
+/* MIDDLE LINE WITH DURATION */
+.flight-duration { 
+  flex: 0 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: #777;
+}
+.flight-duration .line { 
+  width: 100%; 
+  height: 1px; 
+  background: #ddd; 
+  position: relative; 
+  margin: 4px 0;
+}
+.flight-duration .line::before,
+.flight-duration .line::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.774);
+  border-radius: 50%;
+}
+.flight-duration .line::before { left: 0; }
+.flight-duration .line::after { right: 0; }
+
+.flight-duration .line span { 
+  position: absolute; 
+  top: 6px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background: #fff; 
+  padding: 0 4px; 
+  color: #0B7A5F; 
+  font-weight: 600;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.remove small {
+  display: none;
+}
+
+  /* DETAILS */
+  .details-grid { flex-direction: column; gap: 12px; }
+  .details-grid div { display: flex; justify-content: space-between; }
+
+  /* BAGGAGE */
+  .baggage { flex-direction: column; gap: 15px; }
+
+  /* AMENITIES */
+  .amenities { grid-template-columns: 1fr; gap: 10px; }
+  .amenities p { display: flex; justify-content: space-between; }
+
+  /* PRICE CARD COMES LAST */
+  .flight-right { order: 6; }
+  .price-card { padding: 16px; }
+  .btn-book { padding: 14px; font-size: 15px; }
+
+  /* FOOTER */
+  .footer { padding-top: 30px; }
+  .footer-container { 
+    grid-template-columns: 1fr; 
+    padding: 0 20px 20px;
+    gap: 25px;
+  }
+  .footer-brand img { width: 140px; }
+  .footer-brand p { font-size: 13px; }
+  .social-icons a { width: 32px; height: 32px; }
+  .footer-col h4 { font-size: 15px; margin-bottom: 12px; }
+  .footer-col ul li a { font-size: 13px; }
+
+  /* FOOTER BOTTOM ORANGE BAR */
+  .footer-bottom { 
+    flex-direction: column; 
+    gap: 8px; 
+    text-align: center; 
+    padding: 12px 16px;
+    border-radius: 8px 8px 0 0;
+    font-size: 11px;
+  }
+  .footer-bottom .footer-links a { margin: 0 6px; }
+}
