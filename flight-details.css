@@ -386,9 +386,23 @@ body { background: #FDF8F3; color: #1a1a1a; }
   /* BAGGAGE */
   .baggage { flex-direction: column; gap: 15px; }
 
-  /* AMENITIES */
-  .amenities { grid-template-columns: 1fr; gap: 10px; }
-  .amenities p { display: flex; justify-content: space-between; }
+.card .amenities {
+  display: block !important;
+}
+
+.card .amenities p {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin: 0 !important;
+  padding: 4px 0 !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
+}
+
+.card .amenities p b {
+  margin-left: auto !important;
+  white-space: nowrap !important;
+}
 
   /* PRICE CARD COMES LAST */
   .flight-right { order: 6; }
@@ -398,15 +412,16 @@ body { background: #FDF8F3; color: #1a1a1a; }
   /* FOOTER */
   .footer { padding-top: 30px; }
   .footer-container { 
-    grid-template-columns: 1fr; 
-    padding: 0 20px 20px;
+    flex-direction: column; 
+    padding: 2px 20px 20px;
     gap: 25px;
   }
+  .footer-brand { margin-bottom: 10px; margin-top: 20px;}
   .footer-brand img { width: 140px; }
   .footer-brand p { font-size: 13px; }
   .social-icons a { width: 32px; height: 32px; }
-  .footer-col h4 { font-size: 15px; margin-bottom: 12px; }
-  .footer-col ul li a { font-size: 13px; }
+  .footer-col h4 { font-size: 16px; margin-bottom: 12px; }
+  .footer-col ul li a { font-size: 13px; color: white; }
 
   /* FOOTER BOTTOM ORANGE BAR */
   .footer-bottom { 
