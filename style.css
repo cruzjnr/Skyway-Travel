@@ -366,10 +366,6 @@ body {
 
 
 @media (max-width: 768px) {
-  body {
-    margin: 0;
-    padding-bottom: 50px;
-  }
   header.navbar {
     display: flex !important;
     justify-content: space-between !important;
