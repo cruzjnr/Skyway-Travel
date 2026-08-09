@@ -356,179 +356,177 @@ body {
 }
 
 
-
-
-/* MOBILE SCREEN */
-@media (max-width: 1200px ) {
-
-    .page-wrapper {
-        width: 100%;
-        margin: 0 auto;
-    }
-  /* Navbar */
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 12px; 
-    gap: 8px; 
-    flex-wrap: wrap;
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding-bottom: 230px;
+  }
+  header.navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
   }
 
-  .nav-left {
-    order: 1;
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-left img {
-    width: 120px;
-    height: 32px;
+  header.navbar .nav-left .image {
+    max-width: 120px !important;
+    height: auto !important;
   }
 
-  .nav-center {
-    order: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    /* font-size: 14px; */
-    padding-top: 5px;
+  /* HIDE THESE ON MOBILE */
+  header.navbar .nav-center,
+  header.navbar .nav-right {
+    display: none !important;
   }
 
-  .nav-center a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 14px;
+  /* SHOW HAMBURGER */
+  header.navbar .hamburger {
+    display: block !important;
+    font-size: 26px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
   }
-
-  .nav-right {
-    order: 2;
-    flex: 1 1 auto;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 10pxpx;
-    text-align: left;
-  }
-
-  .nav-right span {
-    font-size: 11px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .nav-right small {
-    font-size: 9px;
-    display: block;
-    color: #666;
-    font-weight: 400;
-  }
-
-  .btn-orange {
-    padding: 6px 10px;
-    font-size: 11px;
-  }
-
-  .btn-outline-1 {
-    padding: 6px 10px;
-    font-size: 11px;
-  }
-
-  /* Container and Cards */
-  .container {
-    padding: 12px;
-  }
-
-  .flight-card, .summary-card {
-    padding: 16px; 
-    margin: 0 0 12px 0; 
-    border-radius: 10px;
-  }
-
-  .flight-details {
-    flex-direction: column; 
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  /* Summary Section */
-  .summary { 
-    align-items: flex-start;
-    gap: 12px;
-    padding-bottom: 16px;
-    margin-bottom: 20px;
-    
-  }
-
-  .duration {
-    margin-top: 16px;
-  }
-
-  .summary h3 {
-    font-size: 16px;
-  }
-
-  .airline-info {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-top: 40px;
 }
 
-  .actions {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
+.duration hr {
+   width: 200px;
+   height: 0px;
+   background: #ddd;
+   border: none;
+   margin: 10px auto;
+   position: relative;
+}
 
-  .btn-outline, .btn-outline-1, .btn-orange {
-    padding: 6px 12px; 
-    font-size: 13px;
-  }
+.footer {
+  background: #0B3D3E; /* that dark teal */
+  color: #fff;
+  padding: 40px 20px 0;
+  font-size: 14px;
+}
 
-  /* Passenger */
-  .passenger {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 10px;
-  }
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  /* Booking Reference Box */
-  .ref {
-    padding: 6px 12px; 
-  }
-  .ref-1 { font-size: 9px; }
-  .ref-2 { font-size: 13px; }
+.footer-logo img {
+  width: 160px;
+  margin-bottom: 15px;
+}
 
-  /* Footer */
-  .footer {
-    padding: 30px 20px; 
-  }
+.footer-brand p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ccc;
+}
 
-  .footer-top {
-    flex-direction: column; 
-    gap: 24px;
-  }
+.social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #0B3D3E;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 8px;
+}
 
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  background: #FF7A45; /* orange bar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
   .footer-bottom {
     flex-direction: column;
-    gap: 10px;
-    padding: 12px 20px;
-    width: auto; 
-    margin: 20px 20px 5px 20px;
+    gap: 8px;
     text-align: center;
-  }
-
-  .footer-bottom a {
-    margin-left: 10px;
-    margin-right: 10px;
   }
 }
 
+/* HIDE HAMBURGER ON DESKTOP */
+@media (min-width: 769px) {
+  header.navbar .hamburger {
+    display: none !important;
+  }
+}
 
+.footer-bottom {
+  background: #FF7A45; /* orange */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer-bottom .footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 15px 20px;
+  }
+  .footer-bottom .footer-links a {
+    margin: 0 8px;
+  }
+}
