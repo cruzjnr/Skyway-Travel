@@ -359,7 +359,7 @@ body {
 @media (max-width: 768px) {
   body {
     margin: 0;
-    padding-bottom: 230px;
+    padding-bottom: 200px;
   }
   header.navbar {
     display: flex !important;
